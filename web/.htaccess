@@ -66,3 +66,12 @@ DirectoryIndex app.php
         # RedirectTemp cannot be used instead
     </IfModule>
 </IfModule>
+
+
+<IfModule mod_mime.c>
+    AddType application/font-woff          woff
+    AddType application/font-woff2         woff2
+    AddType application/vnd.ms-fontobject  eot
+    AddType application/x-font-ttf         ttc ttf
+    AddType font/opentype                  otf
+</IfModule>

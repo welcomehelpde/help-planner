@@ -21,20 +21,7 @@ class DefaultController extends Controller
     public function frontendAction(Request $request, $path)
     {
         if(strpos($path, 'assets/') === 0) {
-            $assetPath = $this->get('kernel')->getRootDir() . '/../web/' . $path;
-
-            $fs = new FileSystem();
-            if (!$fs->exists($assetPath)) {
-                throw $this->createNotFoundException();
-            }
-            else {
-                $response = new BinaryFileResponse($assetPath);
-                if((new File($assetPath))->getExtension() === 'html') {
-                    $response->headers->set('Content-Type', 'text/html');
-                }
-
-                return $response;
-            }
+            throw $this->createNotFoundException();
         }
 
         return $this->render('AppBundle:Default:index.html.twig');
