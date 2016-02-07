@@ -1,0 +1,17 @@
+<div ng-include="'assets/directives/header/header.html'"></div>
+
+<main class="container view-shiftsOverview">
+    <div class="clearfix">
+        <h1 class="pull-left">Schichten</h1>
+
+        <div class="btn-group pull-right viewStyle-switch">
+            <label class="btn btn-primary" ng-model="viewStyle" uib-btn-radio="'calendar'">Kalender</label>
+            <label class="btn btn-primary" ng-model="viewStyle" uib-btn-radio="'table'">Tabelle</label>
+        </div>
+    </div>
+
+    <div ng-switch="viewStyle">
+        <div ng-switch-when="calendar" ng-if="shifts" hp-shifts-overview-calendar="shifts"></div>
+        <div ng-switch-when="table" hp-shifts-overview-table="shifts"></div>
+    </div>
+</main>

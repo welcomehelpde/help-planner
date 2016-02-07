@@ -2,6 +2,12 @@
  * base file for imports
  */
 
+$icon-font-path: 'vendor/sass-bootstrap/dist/fonts/';
 @import '../../web/assets/vendor/sass-bootstrap/lib/bootstrap';
+@import '../../web/assets/vendor/fullcalendar/dist/fullcalendar.css';
 
-@import 'views/homepage/homepage.scss';
+@import 'directives/shiftsOverviewTable/shiftsOverviewTable';
+@import 'directives/shiftsOverviewCalendar/shiftsOverviewCalendar';
+
+@import 'views/homepage/homepage';
+@import 'views/shiftsOverview/shiftsOverview';

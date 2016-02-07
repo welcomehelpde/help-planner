@@ -29,11 +29,15 @@ var conf = {
     destination: '../web/assets',
     vendorScripts: [
         '../web/assets/vendor/angular/angular.js',
+        '../web/assets/vendor/jquery/dist/jquery.js',
         '../web/assets/vendor/angular-i18n/angular-locale_de-de.js',
         '../web/assets/vendor/angular-ui-router/release/angular-ui-router.js',
         '../web/assets/vendor/angular-ui-validate/dist/validate.js',
         '../web/assets/vendor/angular-bootstrap/ui-bootstrap.js',
-        '../web/assets/vendor/angular-bootstrap/ui-bootstrap-tpls.js'
+        '../web/assets/vendor/angular-bootstrap/ui-bootstrap-tpls.js',
+        '../web/assets/vendor/moment/moment.js',
+        '../web/assets/vendor/angular-ui-calendar/src/calendar.js',
+        '../web/assets/vendor/fullcalendar/dist/fullcalendar.min.js'
     ],
     scripts: [
         'src/app.js',

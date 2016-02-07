@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('HelpPlanner', ['templates', 'ui.router', 'ui.validate', 'ui.bootstrap'])
+    angular.module('HelpPlanner', ['templates', 'ui.router', 'ui.validate', 'ui.bootstrap', 'ui.calendar'])
     .config(function config ($locationProvider, $urlRouterProvider, $stateProvider) {
         $locationProvider.html5Mode(true);
         $urlRouterProvider.otherwise('/notfound');
@@ -20,6 +20,11 @@
                 url: '/:organization/',
                 templateUrl: 'assets/views/organizationStart/organizationStart.html',
                 controller: 'organizationStartCtrl'
+            })
+            .state('shiftsOverview', {
+                url: '/:organization/shifts/',
+                templateUrl: 'assets/views/shiftsOverview/shiftsOverview.html',
+                controller: 'shiftsOverviewCtrl'
             });
     })
 

@@ -1,5 +1,12 @@
 <div ng-include="'assets/directives/header/header.html'"></div>
 
 <main class="container">
-    <h1>{{ organization.name }}</h1>
+    <h1>
+        <img ng-src="{{ organization.logoUrl }}" alt="{{ organization.name }}">
+        {{ organization.name }}
+    </h1>
+
+    <ul>
+        <li><a ui-sref="shiftsOverview({organization: organization.slug})">Schichten ansehen</a></li>
+    </ul>
 </main>
